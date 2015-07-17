@@ -10,6 +10,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+/**
+ * 
+ * @author lj
+ * 
+ * It can detect a gesture: fling--right to left, and also contains an animation. 
+ * the number on the page will add one, every time you fling your finger right to left.
+ */
 public class GestureViewActivity extends Activity {
 
 	private ViewFlipper mViewFlipper;
@@ -23,16 +30,20 @@ public class GestureViewActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gesture_view);
+		
+		//get the references
 		mViewFlipper = (ViewFlipper)findViewById(R.id.view_flipper);
 		mTextView1 = (TextView)findViewById(R.id.text_view1);
 		mTextView2 = (TextView)findViewById(R.id.text_view2);
 		mInAnimation = AnimationUtils.loadAnimation(this, R.anim.in_frome_right);
 		mOutAnimation = AnimationUtils.loadAnimation(this, R.anim.out_from_left);
 		
+		//set animations for the viewFlipper
 		mViewFlipper.setInAnimation(mInAnimation);
 		mViewFlipper.setOutAnimation(mOutAnimation);
 		mTextView1.setText(String.valueOf(mCount));
 		
+		//create a new GestureDectector.
 		mGestureDetector = new GestureDetector (this, new GestureDetector.SimpleOnGestureListener(){
 
 			@Override
@@ -40,7 +51,7 @@ public class GestureViewActivity extends Activity {
 					float velocityX, float velocityY) {
 				// TODO Auto-generated method stub
 				if(velocityX < -5.0f){
-					mCurrentLayoutState = mCurrentLayoutState == 0 ? 1 : 0;
+					mCurrentLayoutState = mCurrentLayoutState == 0 ? 1 : 0;  /*charge the layout state to indicate which textView will show on the screen*/
 					startViewFlipper(mCurrentLayoutState);
 				}
 				return true;
@@ -49,6 +60,10 @@ public class GestureViewActivity extends Activity {
 		});
 	}
 	
+	/**
+	 * 
+	 * @param currentLayoutState a flag indicate which textView will display in the screen. 
+	 */
 	private void startViewFlipper(int currentLayoutState){
 		
 		mCount++;
@@ -63,6 +78,7 @@ public class GestureViewActivity extends Activity {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// TODO Auto-generated method stub
+		//gestureDetector take over event
 		return mGestureDetector.onTouchEvent(event);
 	}
 

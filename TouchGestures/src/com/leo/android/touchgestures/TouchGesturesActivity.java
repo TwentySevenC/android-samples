@@ -18,7 +18,11 @@ import android.view.Menu;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
+/**
+ * 
+ * @author lj
+ *	detect customer gestures
+ */
 public class TouchGesturesActivity extends Activity {
 	private static final String NEXT = "Next";
 	private static final String YES = "Yes";
@@ -42,10 +46,11 @@ public class TouchGesturesActivity extends Activity {
 		mFrame = (FrameLayout)findViewById(R.id.frame);
 		mFrame.setBackgroundColor(mFirstColor);
 		
+		//use GestureLibraries's fromRawResource() method get gestures file
 		mLibrary = GestureLibraries.fromRawResource(this, R.raw.gestures);
 		//
 		if(!mLibrary.load()){
-			finish();
+			finish();   /*load gestures, if failed, finish activity*/
 		}
 		
 
@@ -55,7 +60,7 @@ public class TouchGesturesActivity extends Activity {
 			@Override
 			public void onGesturePerformed(GestureOverlayView view, Gesture gesture) {
 				// TODO Auto-generated method stub
-				
+				//recognize gestures, the return value is a key-value list; key-gesture name value- score
 				ArrayList<Prediction> predictions = mLibrary.recognize(gesture);
 				
 				if(predictions.size() > 0){
@@ -66,18 +71,18 @@ public class TouchGesturesActivity extends Activity {
 							if(mColorList.size() > 0){
 								mFrame.setBackgroundColor(mColorList.remove());
 							}
-							Toast.makeText(getApplicationContext(), PREV, Toast.LENGTH_SHORT).show();
+//							Toast.makeText(getApplicationContext(), PREV, Toast.LENGTH_SHORT).show();
 						}else if(name.equals(NEXT)){
 							mColorList.add(((ColorDrawable)mFrame.getBackground()).getColor());
 							int color = mRandom.nextInt(0xffffff)|0xff000000;
 							mFrame.setBackgroundColor(color);
-							Toast.makeText(getApplicationContext(), NEXT, Toast.LENGTH_SHORT).show();
+//							Toast.makeText(getApplicationContext(), NEXT, Toast.LENGTH_SHORT).show();
 						}else if(name.equals(YES)){
 							mLayout.setBackgroundColor(((ColorDrawable)mFrame.getBackground()).getColor());
-							Toast.makeText(getApplicationContext(), YES, Toast.LENGTH_SHORT).show();
+//							Toast.makeText(getApplicationContext(), YES, Toast.LENGTH_SHORT).show();
 						}else if(name.equals(NO)){
 							mLayout.setBackgroundColor(mBgColor);
-							Toast.makeText(getApplicationContext(), NO, Toast.LENGTH_SHORT).show();
+//							Toast.makeText(getApplicationContext(), NO, Toast.LENGTH_SHORT).show();
 						}else{
 							Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
 						}

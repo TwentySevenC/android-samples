@@ -15,6 +15,7 @@ public abstract class SingleFragmentActivity extends Activity {
 		FragmentManager fm = getFragmentManager();
 		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
 		
+		//add a fragment to activity..
 		if(fragment == null){
 			fragment = createFragment();
 			fm.beginTransaction()
@@ -22,6 +23,6 @@ public abstract class SingleFragmentActivity extends Activity {
 			.commit();
 		}
 	}
-	
+	//factory-method pattern
 	protected abstract Fragment createFragment();
 }

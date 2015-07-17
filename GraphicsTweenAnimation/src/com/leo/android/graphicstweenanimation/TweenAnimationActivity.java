@@ -1,13 +1,20 @@
 package com.leo.android.graphicstweenanimation;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+/**
+ * 
+ * @author lj
+ * View Animation: Tween Animation and Frame Animation
+ * Tween Animation: Creates an animation by performing a series of transformations on a single image with an Animation
+ * size, transparency, orientation, position
+ * TranslationDrawable, AnimationDrawable, Animation
+ */
 public class TweenAnimationActivity extends Activity {
 	private ImageView mImageView;
 	private Animation mAnim;
@@ -17,7 +24,8 @@ public class TweenAnimationActivity extends Activity {
 		setContentView(R.layout.activity_tween_animation);
 		mImageView = (ImageView)findViewById(R.id.tween_image);
 		
-//		mAnim = (Animation) getResources().getAnimation(R.anim.tween_animation);
+//		mAnim = (Animation) getResources().getAnimation(R.anim.tween_animation); /*this is wrong*/
+		
 		mAnim = AnimationUtils.loadAnimation(this, R.anim.tween_animation);
 	}
 

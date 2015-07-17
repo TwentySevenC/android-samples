@@ -5,7 +5,12 @@ import android.app.Activity;
 import android.graphics.drawable.TransitionDrawable;
 import android.view.Menu;
 import android.widget.ImageView;
-
+/**
+ * 
+ * @author lj
+ * TranslationDrawable : a 2-layer drawable ,
+ * can fade between 1st & 2nd layers
+ */
 public class TransitonDrawableActivity extends Activity {
 
 	private ImageView mImageView;
@@ -15,6 +20,7 @@ public class TransitonDrawableActivity extends Activity {
 		setContentView(R.layout.activity_transiton_drawable);
 		mImageView = (ImageView)findViewById(R.id.transiton_image);
 		TransitionDrawable drawable = (TransitionDrawable) mImageView.getDrawable();
+		//Enable the cross fade of the drawable
 		drawable.setCrossFadeEnabled(true);
 		drawable.startTransition(5000);
 	}

@@ -8,7 +8,13 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
+/**
+ * 
+ * @author lj
+ * the use of RingtoneManager
+ * getDefaultUri(int type)
+ * getRingtone(Uri uri)
+ */
 public class RingtoneManagerActivity extends Activity {
 
 	@Override

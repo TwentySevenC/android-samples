@@ -6,6 +6,11 @@ import android.graphics.drawable.AnimationDrawable;
 import android.view.Menu;
 import android.widget.ImageView;
 
+/**
+ * 
+ * @author lj
+ * Frame Animation: creates an animation by showing a sequence of images in order with an AnimationDrawable.
+ */
 public class FrameAnimationActivity extends Activity {
 	private ImageView mImageView;
 	private AnimationDrawable mAnimationDrawable;

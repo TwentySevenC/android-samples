@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
+/**
+ * 
+ * @author lj
+ * ShapeDrawable 
+ */
 public class GraphicsShapeActivity extends Activity {
 	private RelativeLayout mLayout;
 	private final int alpha = 127;

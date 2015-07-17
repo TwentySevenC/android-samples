@@ -4,6 +4,11 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+/**
+ * 
+ * @author lj
+ * use xml to create two shapeDrawable
+ */
 public class GraphicsShapeActivity extends Activity {
 
     @Override

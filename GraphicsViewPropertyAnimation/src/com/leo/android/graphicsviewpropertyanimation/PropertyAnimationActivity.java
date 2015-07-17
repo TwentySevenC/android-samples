@@ -23,6 +23,8 @@ public class PropertyAnimationActivity extends Activity {
 		
 		@Override
 		public void run() {
+			//View's animate() method returns a ViewPropertyAnimator object, 
+			//which can be used to animate specific properties on this View.
 			mImageView.animate()
 			.alphaBy(1)
 			.setDuration(3000)

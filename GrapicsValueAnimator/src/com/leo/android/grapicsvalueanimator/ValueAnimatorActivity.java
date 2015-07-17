@@ -12,6 +12,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * 
+ * @author lj
+ * Property Animation: Creates an animation by modifying an object's property values 
+ * over a set period of time with an Animator
+ */
 public class ValueAnimatorActivity extends Activity {
 	private static final int RED = Color.RED;
 	private static final int BLUE = Color.BLUE;
@@ -36,16 +42,19 @@ public class ValueAnimatorActivity extends Activity {
 	public void startValueAnimator(){
 		final ImageView imageView  = (ImageView)findViewById(R.id.value_animator_image);
 		
+		//create a ValueAnimator
 		ValueAnimator animtor = ValueAnimator.ofObject(new ArgbEvaluator(), RED, BLUE);
+		//add an AnimatorUpdateListener for the animator
 		animtor.addUpdateListener(new AnimatorUpdateListener() {
 			
 			@Override
 			public void onAnimationUpdate(ValueAnimator animator) {
 				// TODO Auto-generated method stub
+				//change background color
 				imageView.setBackgroundColor((Integer)animator.getAnimatedValue());
 			}
 		});
-		
+		//set last time for animator
 		animtor.setDuration(3000);
 		animtor.start();
 	}
