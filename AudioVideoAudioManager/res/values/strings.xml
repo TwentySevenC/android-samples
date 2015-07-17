@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AudioVideoAudioManager</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="volume_up">Up</string>
+	<string name="volume_down">Down</string>
+	<string name="audio_play">Play</string>
+	
+</resources>

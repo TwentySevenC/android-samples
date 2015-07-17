@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GraphicsShapeDrawXml</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="cyan_voal">Cyan Voal</string>
+	<string name="magenta_oval">Magenta Voal</string>
+</resources>

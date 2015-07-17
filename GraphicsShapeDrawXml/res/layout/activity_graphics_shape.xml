@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraphicsShapeActivity" >
+
+    <ImageView
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/padding"
+        android:src="@drawable/cyan_shape"
+        android:contentDescription="@string/cyan_voal"/>
+    
+    <ImageView
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/padding"
+        android:src="@drawable/magenta_shape"
+        android:contentDescription="@string/magenta_oval"
+        />
+
+</RelativeLayout>
