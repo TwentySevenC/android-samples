@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!-- <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" 
+        /> -->
+
+        <Button
+            android:id="@+id/take_picture"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/camera_shape"
+            android:contentDescription="@string/camera_button"
+            />
+		
+</RelativeLayout>

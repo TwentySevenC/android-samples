@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AudioVideoAudioRecording</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="audio_record">AudioRecord</string>
+	<string name="audio_play">AudioPlay</string>
+</resources>
