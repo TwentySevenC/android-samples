@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JavaStatePatternDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="insert_dollar">Insert one dollar!</string>
+    <string name="eject_dollar">Eject your dollar!</string>
+	<string name="candy_out">Candy Go!</string>
+	<string name="you_win">Congratulations! you win a candy!</string>
+	<string name="candy_machine">Candy Machine</string>
+	
+	<string name="sold_state_insert_dollar">Please wait, a candy is running out..</string>
+	<string name="soldout_state_insert_dollar">Sorry, no candy..</string>
+	<string name="nodollar_state_insert_dollar">You insert one dollar..</string>
+	<string name="hasdollar_state_insert_dollar">You have inserted one dollar..</string>
+	<string name="win_state_insert_dollar">Please wait, candys is running out..</string>
+	
+	<string name="nodollar_state_eject_dollar">You haven\'t inserted one dollar..</string>
+	<string name="hasdollar_state_eject_dollar">Eject your dollar..</string>
+	<string name="sold_state_eject_dollar">You already let candy go..</string>
+	<string name="soldout_state_eject_dollar">No dollar has been inserted..</string>
+	<string name="win_state_eject_dollar">You already let candy go..</string>
+	
+	<string name="nodollar_state_candy_go">You haven\'t inserted one dollar..</string>
+	<string name="hasdollar_state_candy_go">Give you a candy..</string>
+	<string name="win_candy">Congratulations! you win a candy..</string>
+	<string name="sold_state_candy_do">Don\'t hurry, a candy is already running out..</string>
+	<string name="soldout_state_candy_go">No candy in machine..</string>
+	<string name="win_state_candy_go">Don\'t hurry, candys is already running out..</string>
+</resources>
